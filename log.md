@@ -68,5 +68,5 @@ Objetivos:
 * Hacer un plugin con una consulta sencilla a elasticSearch
 
 He hablado con Jesús. Dos líneas de avance:
-1. Separar crossfilter de la biblioteca gráfica de Adrián. Meter elasticSearch.
-2. Un plugin Kibana que haga lo siguiente: coger las líneas de una base de datos de commits y mostrarlo en una tabla html en kibana. Además, permitir aplicar filtros (los filtros de Kibana). Si lo hago bien, debería funcionar automáticamente. Ojo: esto no usa el tratamiento de datos de Adrián.
+1  Separar crossfilter de la biblioteca gráfica de Adrián. Meter elasticSearch.
+2  Un plugin Kibana que haga lo siguiente: coger las líneas de una base de datos de commits y mostrarlo en una tabla html en kibana. Además, permitir aplicar filtros (los filtros de Kibana). Si lo hago bien, debería funcionar automáticamente. Ojo: esto no usa el tratamiento de datos de Adrián.
