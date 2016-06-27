@@ -1,4 +1,4 @@
-15-06-2015
+##15-06-2015
 
 He instalado un servidor Django. Usa bootstrap y angularjs. Creo que uso HTML5...
 
@@ -6,14 +6,19 @@ He instalado un servidor Django. Usa bootstrap y angularjs. Creo que uso HTML5..
 
 He instalado la biblioteca de Adrián y he estado jugando con ella creando gráficos. 
 
+```
 Cd threesome/
 vio@lenovo:~$ python -m SimpleHTTPServer
 localhost:8000
+```
 
 para cargar la versión adecuada de node.js (si no no funciona kibana ni elasticSearch)
+
+```
 source ../nvm/nvm.sh
 bin/elasticsearch
 bin/kibana
+```
 
 He estado instalando kibana 5 development y he mirado documentación y videos sobre cómo hacer plugins. Este es de los mejores tutoriales que he encontrado:
 
@@ -24,20 +29,25 @@ Todavía no he conseguido hacer un plugin “hola mundo”, pero estoy a punto.
 He entendido la estructura de crossfilter. Adrián la usa en su código para pintar las gráficas. Mi misión al final es sustituir crossfilter por elasticSearch. Para ello tengo que colaborar mucho con Adrián cambiando o aislando crossfilter de las partes donde pinta, para luego hacerlo con elasticSearch.
 
 
-20-06-2015
+##20-06-2015
 
 He estado mirando más documentación de Kibana
 Al hacer git pull, se ha roto todo y kibana ya no funciona al ejecutarlo. Era cuestión de actualizar node.js:
 
+```
 source ../nvm/nvm.sh
 nvm install "$(cat .node-version)"
 npm install
+```
 
 He instalado el plugin timelion
-vio@lenovo:~/kibanadev$ ./bin/kibana-plugin install https://download.elastic.co/kibana/timelion/timelion-5.0.0-alpha3.zip
 
+```
+vio@lenovo:~/kibanadev$ 
+./bin/kibana-plugin install https://download.elastic.co/kibana/timelion/timelion-5.0.0-alpha3.zip
+```
 
-21-06-2016
+##21-06-2016
 
 He conseguido crear mi primer plugin – el del reloj. No parece que haga nada pero al menos sale en visualizaciones.
 
@@ -48,11 +58,15 @@ He hablado con Jesús y me ha dicho que reporte el error, si es que es un error.
 .MD Creado y solucionado el “bug”. Resulta que tenía que cambiar una variable solamente en mi sistema (ver github/Notes)
 
 
-22-06-2016
+##27-06-2016
 
 Objetivos:
 
-Actualizar proyecto Adrián
-Poner los dos paneles de Adrián en un div en mi servidor Django
-Ordenar y arreglar github
-Hacer un plugin con una consulta sencilla a elasticSearch
+* Actualizar proyecto Adrián
+* Poner los dos paneles de Adrián en un div en mi servidor Django para ver qué tal se comporta.
+* Ordenar y arreglar mi cuenta de Github - hecho
+* Hacer un plugin con una consulta sencilla a elasticSearch
+
+He hablado con Jesús. Dos líneas de avance:
+1. Separar crossfilter de la biblioteca gráfica de Adrián. Meter elasticSearch.
+2. Un plugin Kibana que haga lo siguiente: coger las líneas de una base de datos de commits y mostrarlo en una tabla html en kibana. Además, permitir aplicar filtros (los filtros de Kibana). Si lo hago bien, debería funcionar automáticamente. Ojo: esto no usa el tratamiento de datos de Adrián.
