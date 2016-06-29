@@ -62,11 +62,17 @@ He hablado con Jesús y me ha dicho que reporte el error, si es que es un error.
 
 Objetivos:
 
-* Actualizar proyecto Adrián
-* Poner los dos paneles de Adrián en un div en mi servidor Django para ver qué tal se comporta.
+* Actualizar proyecto Adrián - hecho
+* Poner los dos paneles de Adrián en un div en mi servidor Django para ver qué tal se comporta - hecho
 * Ordenar y arreglar mi cuenta de Github - hecho
 * Hacer un plugin con una consulta sencilla a elasticSearch
+
+He intentado poner los dos paneles 3D en Kibana sin éxito. He tenido muchos líos de módulos javascript. (THREE not defined por ejemplo).
+
 
 He hablado con Jesús. Dos líneas de avance:
 1  Separar crossfilter de la biblioteca gráfica de Adrián. Meter elasticSearch.
 2  Un plugin Kibana que haga lo siguiente: coger las líneas de una base de datos de commits y mostrarlo en una tabla html en kibana. Además, permitir aplicar filtros (los filtros de Kibana). Si lo hago bien, debería funcionar automáticamente. Ojo: esto no usa el tratamiento de datos de Adrián.
+
+##28-06-2016
+
