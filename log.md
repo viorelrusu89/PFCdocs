@@ -74,5 +74,10 @@ He hablado con Jesús. Dos líneas de avance:
 1  Separar crossfilter de la biblioteca gráfica de Adrián. Meter elasticSearch.
 2  Un plugin Kibana que haga lo siguiente: coger las líneas de una base de datos de commits y mostrarlo en una tabla html en kibana. Además, permitir aplicar filtros (los filtros de Kibana). Si lo hago bien, debería funcionar automáticamente. Ojo: esto no usa el tratamiento de datos de Adrián.
 
-##28-06-2016
+##01-07-2016
 
+* Hacer algún tutorial completo de Kibana. Parece que no tengo todas las nociones claras.
+  Sigo el tutorial oficial de Kibana https://www.elastic.co/guide/en/kibana/current/getting-started.html - hecho
+* Hacer plugin: una tabla html con los datos de commits.
+
+No entiendo cómo debería introducir los datos de commits en elasticSearch. No tengo los datos en un formato JSON de elasticSearch.
