@@ -78,6 +78,19 @@ He hablado con Jesús. Dos líneas de avance:
 
 * Hacer algún tutorial completo de Kibana. Parece que no tengo todas las nociones claras.
   Sigo el tutorial oficial de Kibana https://www.elastic.co/guide/en/kibana/current/getting-started.html - hecho
-* Hacer plugin: una tabla html con los datos de commits.
+* Hacer plugin: una tabla html con los datos de commits - uff.. necesito ver cómo sacar los datos de elasticSearch a través de Kibana.
 
 No entiendo cómo debería introducir los datos de commits en elasticSearch. No tengo los datos en un formato JSON de elasticSearch.
+
+Ya lo tengo. Jesús me ha pasado un dump que cargo en mi elasticSearch con https://github.com/taskrabbit/elasticsearch-dump
+Dejo el dump en Docs/
+
+##07-07-2016
+
+Necesito entender más la estructura de los plugins de Kibana.
+
+* Hacer tutorial de angularJS
+* Hacer tutorial de requireJS
+* Hacer tutorial de Tim Roes donnde viene cómo hacer consultar a elasticSearch desde Kibana.
+https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/
+
