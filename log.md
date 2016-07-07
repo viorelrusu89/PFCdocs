@@ -89,6 +89,8 @@ Dejo el dump en Docs/
 
 Necesito entender más la estructura de los plugins de Kibana.
 
+* Hacer algún tutorial sobre node.js, npm modules, nvm...
+https://www.sitepoint.com/beginners-guide-node-package-manager/
 * Hacer tutorial de angularJS
 * Hacer tutorial de requireJS
 * Hacer tutorial de Tim Roes donnde viene cómo hacer consultar a elasticSearch desde Kibana.
