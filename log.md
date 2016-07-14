@@ -91,8 +91,17 @@ Necesito entender más la estructura de los plugins de Kibana.
 
 * Hacer algún tutorial sobre node.js, npm modules, nvm...
 https://www.sitepoint.com/beginners-guide-node-package-manager/
-* Hacer tutorial de angularJS
+* Hacer tutorial de angularJS - in progress...
 * Hacer tutorial de requireJS
-* Hacer tutorial de Tim Roes donnde viene cómo hacer consultar a elasticSearch desde Kibana.
-https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/
+* Hacer tutorial de Tim Roes donde viene cómo hacer consultar a elasticSearch desde Kibana.
+https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/ - hecho
+
+##13-07-2016
+
+* He conseguido hacer consultas a elasticSearch a través de Kibana. El tutorial de Tim Roes ya lo hace, pero he añadido una nueva función en la api de Kibana, /ncommits, un nuevo controlador angular y una nueva plantilla html para hacer una consulta a elasticSearch preguntando por el número de commits del índice commits_index.
+
+* He conseguido meter en el plugin hola mundo con el reloj una escena básica de Adrián.
+
+
+
 
