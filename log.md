@@ -92,7 +92,7 @@ Necesito entender más la estructura de los plugins de Kibana.
 * Hacer algún tutorial sobre node.js, npm modules, nvm...
 https://www.sitepoint.com/beginners-guide-node-package-manager/
 * Hacer tutorial de angularJS - in progress...
-* Hacer tutorial de requireJS
+* Hacer tutorial de requireJS - hecho
 * Hacer tutorial de Tim Roes donde viene cómo hacer consultar a elasticSearch desde Kibana.
 https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/ - hecho
 * Repasar javascript. En este manual viene también muy bien explicado node.js http://eloquentjavascript.net/
@@ -103,5 +103,12 @@ https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/ - 
 
 * He conseguido meter en el plugin hola mundo con el reloj una escena básica de Adrián.
 
+##22-08-2016
 
+* eloquent javascript: repaso javascript, módulos con require (CommonJS), nodejs - repasado
+* Hacer tutorial de requireJS - hecho
 
+##23-08-2016
+
+* 
+* Pensar cómo estructurar la biblioteca 3D de Adrián en módulos (require, export) para usarlos simplemente después.
