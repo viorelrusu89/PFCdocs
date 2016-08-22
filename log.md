@@ -91,7 +91,6 @@ Necesito entender más la estructura de los plugins de Kibana.
 
 * Hacer algún tutorial sobre node.js, npm modules, nvm...
 https://www.sitepoint.com/beginners-guide-node-package-manager/
-* Hacer tutorial de angularJS - in progress...
 * Hacer tutorial de requireJS - hecho
 * Hacer tutorial de Tim Roes donde viene cómo hacer consultar a elasticSearch desde Kibana.
 https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/ - hecho
@@ -110,5 +109,5 @@ https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/ - 
 
 ##23-08-2016
 
-* 
+* Hacer tutorial de angularJS - in progress...
 * Pensar cómo estructurar la biblioteca 3D de Adrián en módulos (require, export) para usarlos simplemente después.
