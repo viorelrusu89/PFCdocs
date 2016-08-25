@@ -1,6 +1,6 @@
 ##15-06-2015
 
-He instalado un servidor Django. Usa bootstrap y angularjs. Creo que uso HTML5...
+He instalado un servidor Django de pruebas. Usa bootstrap y angularjs. Se encuentra todo en djangoServerTemplate/
 
 [img1] 
 
@@ -105,9 +105,65 @@ https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/ - 
 ##22-08-2016
 
 * eloquent javascript: repaso javascript, módulos con require (CommonJS), nodejs - repasado
+http://eloquentjavascript.net/20_node.html
+
 * Hacer tutorial de requireJS - hecho
+https://www.sitepoint.com/understanding-requirejs-for-effective-javascript-module-loading/
 
 ##23-08-2016
 
-* Hacer tutorial de angularJS - in progress...
+* Hacer tutorial de angularJS - hecho un repaso general de AngularJS 1. 
 * Pensar cómo estructurar la biblioteca 3D de Adrián en módulos (require, export) para usarlos simplemente después.
+
+Posible solución: hacer que todos los módulos sean módulos RequireJS. 
+
+1 Todos aquellos módulos o librerías externas serán cargadas como módulos de nodejs (d3.js, three, crossfilter).
+
+```
+npm install d3
+npm install three
+npm install crossfilter
+```
+2 Estructurar código de Adrián en módulos RequireJS, esto es, todo lo que está en js/. Para ello hay que establecer dependencias, qué fichero usa qué fichero, para luego definir módulos sencillos al estilo:
+
+```
+define(function(products) {
+  return {
+    reserveProduct: function() {
+      console.log("Function : reserveProduct");
+
+      return true;
+    }
+  }
+  });
+  ```
+  
+Y si el módulo depende de otros, entonces al estilo:
+
+```
+define(["credits","products"], function(credits,products) {
+
+  console.log("Function : purchaseProduct");
+
+  return {
+    purchaseProduct: function() {
+
+      var credit = credits.getCredits();
+      if(credit > 0){
+        products.reserveProduct();
+        return true;
+      }
+      return false;
+    }
+  }
+});
+```
+
+Finalmente, un fichero main.js arrancará todo usando require:
+
+```
+require(["purchase"],function(purchase){
+  purchase.purchaseProduct();
+});
+```
+
