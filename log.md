@@ -115,14 +115,14 @@ https://www.sitepoint.com/understanding-requirejs-for-effective-javascript-modul
 * Hacer tutorial de angularJS - hecho un repaso general de AngularJS 1. 
 * Pensar cómo estructurar la biblioteca 3D de Adrián en módulos (require, export) para usarlos simplemente después.
 
-Posible solución: hacer que todos los módulos sean módulos RequireJS. 
+Solución 1: hacer que todos los módulos sean módulos RequireJS. 
 
 1 Todos aquellos módulos o librerías externas serán cargadas como módulos de nodejs (d3.js, three, crossfilter).
 
 ```
-npm install d3
-npm install three
-npm install crossfilter
+npm install --save d3
+npm install --save three
+npm install --save crossfilter
 ```
 2 Estructurar código de Adrián en módulos RequireJS, esto es, todo lo que está en js/. Para ello hay que establecer dependencias, qué fichero usa qué fichero, para luego definir módulos sencillos al estilo:
 
@@ -166,4 +166,25 @@ require(["purchase"],function(purchase){
   purchase.purchaseProduct();
 });
 ```
+Solución 2: Usar el sistema de módulos de node, CommonJS. Para ello:
 
+1. Definir los módulos así:
+
+garble.js
+```
+module.exports = function(string) {
+//código
+}
+```
+2. Usarlos así:
+
+```
+var garble = require("./garble");
+console.log(garble(argument));
+```
+
+
+##25-08-2016
+
+* Hacer un plugin más sofisticado que el que tengo, con datos de elasticSearch
+* 
