@@ -183,8 +183,44 @@ var garble = require("./garble");
 console.log(garble(argument));
 ```
 
+ACTUALIZACIÓN: hacer que todo sea módulo requireJS no tiene sentido. Con módulos de node se pueden importar todas las librerías que necesito.
 
 ##25-08-2016
 
 * Hacer un plugin más sofisticado que el que tengo, con datos de elasticSearch
-* 
+
+##30-08-2016
+
+* Añadir una biblioteca JS al entorno de un plugin Kibana
+
+1. Cargar un módulo de node que Kibana ya tiene preinstalado - Conseguido. Usado 'lodash'
+
+```
+	var lodash = require('lodash');
+	var output = lodash.without([1, 2, 3], 1);
+	console.log(output);
+```
+
+3. Cargar la biblioteca 'three' de alguna forma y usarla en el plugin del reloj
+```
+cd v3metrics/
+npm install three
+```
+En algún sitio de clock.js cargo el módulo node, de manera que puedo acceder a toda la biblioteca three.js a través de la variable THREE.
+```
+var THREE = require("three");
+```
+
+En clock.html uso la biblioteca recién importada. Los métodos y las variables se usan accediendo a través de la variable recién inicializada:
+
+        scene = new THREE.Scene();
+        geometry = new THREE.BoxGeometry(200, 200, 200);
+
+NOTA: tener claro qué ejecuta el servidor y qué el cliente. En este caso:
+- El servidor resuelve este require("three") encontrando la biblioteca node adecuada donde corresponda (en este caso en v3metrics/build/node_modules).
+- El servidor envía al cliente el fichero three.js, de manera que ahora el cliente puede ejecutar código usando esta nueva biblioteca.
+
+4. Cargar una biblioteca personal en un plugin de kibana
+
+TODO: Recomendar a Adrián publicar su biblioteca en npm.
+
