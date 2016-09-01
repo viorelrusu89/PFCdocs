@@ -224,3 +224,32 @@ NOTA: tener claro qué ejecuta el servidor y qué el cliente. En este caso:
 
 TODO: Recomendar a Adrián publicar su biblioteca en npm.
 
+#30-08- 2016
+
+He movido el código de uso de la biblioteca three dentro de un controlador angular. Es el sitio que le corresponde.
+
+Intentando actualizar mi versión de kibana con la de desarrollo de github: el problema es que hace dos meses no actualizo. Entonces mi rama origin es muy diferente de la rama kibana/origin. Un simple git merge da un montón de conflictos (he tocado muchos ficheros).
+
+Comandos muy útiles que he aprendido de git:
+
+git push -f origin master : para forzar al servidor a perder algunos commits cuando no se deja
+borrar todos los archivos manualmente
+git add, git commit
+git branch -u kibana/master: he puesto mi rama master a seguir a la rama master de kibana
+git pull : se trae todos los cambios de kibana/master a local (porque ahora mi rama master apunta a kibana/master). Este es el comando que necesito utilizar ahora cada vez que quiera actualizar Kibana (hace un fetch y un merge automático).
+
+nvm install 6.4.0
+npm install : para actualizar los módulos de node de la nueva versión de kibana
+Borro mis antiguos plugins
+Con Yeoman genero un nuevo plugin base
+
+Intento a partir de ahora usar la versión de elasticsearch que trae kibana, me evitaré problemas. Según CONTRIBUTING.md:
+npm run elasticsearch
+npm start
+
+
+
+
+
+
+
