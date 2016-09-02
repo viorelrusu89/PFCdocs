@@ -224,7 +224,7 @@ NOTA: tener claro qué ejecuta el servidor y qué el cliente. En este caso:
 
 TODO: Recomendar a Adrián publicar su biblioteca en npm.
 
-#30-08- 2016
+#30-08-2016
 
 He movido el código de uso de la biblioteca three dentro de un controlador angular. Es el sitio que le corresponde.
 
@@ -237,8 +237,9 @@ borrar todos los archivos manualmente
 git add, git commit
 git branch -u kibana/master: he puesto mi rama master a seguir a la rama master de kibana
 git pull : se trae todos los cambios de kibana/master a local (porque ahora mi rama master apunta a kibana/master). Este es el comando que necesito utilizar ahora cada vez que quiera actualizar Kibana (hace un fetch y un merge automático).
+git rm -r --cached myFolder : to untrack a folder
 
-nvm install 6.4.0
+nvm install 6.4.0 (.node_version)
 npm install : para actualizar los módulos de node de la nueva versión de kibana
 Borro mis antiguos plugins
 Con Yeoman genero un nuevo plugin base
@@ -247,9 +248,21 @@ Intento a partir de ahora usar la versión de elasticsearch que trae kibana, me 
 npm run elasticsearch
 npm start
 
+##02-09-2016
 
+* Traer funcionalidad de mi antiguo plugin elasticsearch_status al nuevo plugin creado con Yeoman
 
+Problemas encontrados:
+- npm run elasticsearch. Error. Acciones realizadas: actualizar nvm, source ../nvm/nvm.sh, nvm install .node-version, npm install. #TODO: seguir investigando. De momento sigo usando mi elasticsearch por separado
+- Parece que incluso mi elasticsearch antiguo tiene problemas para consultar datos
+Discover: [parsing_exception] Unknown key for a START_ARRAY in [stored_fields]., with { line=1 col=302 }
+Actualizo elasticsearch a alpha 5 desde la página oficial y cargo el dump con taskrabbit:
+```
+npm install elasticdump
+source nvm/nvm.sh
+node_modules/elasticdump/bin/elasticdump --input=/home/vio/Docs/opnfv_git_es.json --output=http://localhost:9200/commits-index
+```
 
-
-
+* Hacer una visualización con la biblioteca de Adrián, pero sin usar
+crossfilter, sino usando un fichero JSON
 
