@@ -268,5 +268,13 @@ crossfilter, sino usando un fichero JSON
 
 ##13-09-2016
 
+Trabajando en importar lo necesario para poder usar 3dc.js:
+- FontUtils.js, TextGeometry.js, Projector.js, OrbitControls.js: como lo único que hacen es atar objetos a THREE, puedo hacer require simplemente y añaden las funciones y variables al objeto THREE ya definido.
+- domevents.js, Detector.js y Stats.js definen nuevas variables. Lo que hago es añadir una linea en esos ficheros, exportando dicha variable para poder importarla en clock.js
+- THREEx.FullScreen.js, THREEx.WindowResize.js: he quitado las líneas tipo 
+
+/** @namespace */
+var THREEx		= THREEx 		|| {};
+
 * Encapsular biblioteca de Adrián como módulo de node
 * Hacer un plugin con las siguientes características: una consulta a elasticSearch que me devuelva todos los campos. Selecciono los 20 primeros por ejemplo y los muestro en una tabla html. Mediante los controles de Kibana, permitir: 1. Que se pueda cambiar el nombre de la columna seleccionada. 2. Que se puedan añadir columnas. Por ejemplo, empezar con una por defecto y permitir añadir más.
