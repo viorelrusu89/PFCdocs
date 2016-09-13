@@ -266,3 +266,7 @@ node_modules/elasticdump/bin/elasticdump --input=/home/vio/Docs/opnfv_git_es.jso
 * Hacer una visualización con la biblioteca de Adrián, pero sin usar
 crossfilter, sino usando un fichero JSON
 
+##13-09-2016
+
+* Encapsular biblioteca de Adrián como módulo de node
+* Hacer un plugin con las siguientes características: una consulta a elasticSearch que me devuelva todos los campos. Selecciono los 20 primeros por ejemplo y los muestro en una tabla html. Mediante los controles de Kibana, permitir: 1. Que se pueda cambiar el nombre de la columna seleccionada. 2. Que se puedan añadir columnas. Por ejemplo, empezar con una por defecto y permitir añadir más.
