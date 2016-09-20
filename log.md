@@ -277,4 +277,12 @@ Trabajando en importar lo necesario para poder usar 3dc.js:
 var THREEx		= THREEx 		|| {};
 
 * Encapsular biblioteca de Adrián como módulo de node
-* Hacer un plugin con las siguientes características: una consulta a elasticSearch que me devuelva todos los campos. Selecciono los 20 primeros por ejemplo y los muestro en una tabla html. Mediante los controles de Kibana, permitir: 1. Que se pueda cambiar el nombre de la columna seleccionada. 2. Que se puedan añadir columnas. Por ejemplo, empezar con una por defecto y permitir añadir más.
+
+##13-09-2016
+
+Sobre las importaciones: se puede hacer de muchas formas. La forma más fácil es haciendo alguna chapuza. La que he hecho me vale de momento. El otro extremo es por ejemplo tener un módulo de node minimizado con todas las cosas extras que necesita 3dc.js + la propia biblioteca de 3dc.js y especificando lo demás como dependencia.
+
+De momento. Hitos (o líneas de desarrollo):
+
+1. Hacer un 3dc+elasticsearch sin kibana. Conseguir una visualización con 3dc.js, con datos que me traigo de elasticsearch mediante la api para javascript. Sin crossfilter.
+2. Hacer un plugin con las siguientes características: una consulta a elasticSearch que me devuelva todos los campos. Selecciono los 20 primeros por ejemplo y los muestro en una tabla html. Mediante los controles de Kibana, permitir: 1. Que se pueda cambiar el nombre de la columna seleccionada. 2. Que se puedan añadir columnas. Por ejemplo, empezar con una por defecto y permitir añadir más.
