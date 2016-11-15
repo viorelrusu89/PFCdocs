@@ -286,3 +286,15 @@ De momento. Hitos (o líneas de desarrollo):
 
 1. Hacer un 3dc+elasticsearch sin kibana. Conseguir una visualización con 3dc.js, con datos que me traigo de elasticsearch mediante la api para javascript. Sin crossfilter.
 2. Hacer un plugin con las siguientes características: una consulta a elasticSearch que me devuelva todos los campos. Selecciono los 20 primeros por ejemplo y los muestro en una tabla html. Mediante los controles de Kibana, permitir: 1. Que se pueda cambiar el nombre de la columna seleccionada. 2. Que se puedan añadir columnas. Por ejemplo, empezar con una por defecto y permitir añadir más.
+
+##Ver notas cuaderno de notas (he seguido apuntando allí mi progreso)
+
+##15-11-2016
+
+Tengo de momento un pie3D y un barschart3D pero que es 2D en realidad. Pero funciona en Kibana. Hay cosas a pulir en el dashboard. Después de la reunión de hoy, hitos:
+
+- Leyenda pie3D. Arreglar resaltado
+- Centrar siempre el pie en el div. Tanto en visualización como en el dashboard. Quitar desplazamiento lateral con botoón secundario (dejar solo rotar). Quitar dat.gui
+- Arreglar conflictos en dashboard entre charts. Filtros que no se aplican, "pie" que se dibuja en la escena del barschart, etc.
+- Agregar tercera dimensión barsChart3D
+- Agregar alguna visualización más a la biblioteca vr_charts
