@@ -310,4 +310,11 @@ Sin Kibana:
 2. Cambiar nombres de funciones sin 1,2
 3. Convertir variables en locales de alguna forma (corchetes??)
 
+He cambiado el nombre de las funciones init1 init2, render1 render2, animate1 animate2, update1 update2 a sus equivalentes sin números, y se han roto las escenas. Debe ser que se reescriben las funciones. Lo que he hecho es encerrar todo el script1 y el script 2 para crear un ámbito de variables diferentes por cada script (adiós variables globales):
 
+
+```
+(function() {
+   //script1
+}());
+```
