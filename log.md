@@ -293,8 +293,21 @@ De momento. Hitos (o líneas de desarrollo):
 
 Tengo de momento un pie3D y un barschart3D pero que es 2D en realidad. Pero funciona en Kibana. Hay cosas a pulir en el dashboard. Después de la reunión de hoy, hitos:
 
-- Leyenda pie3D. Arreglar resaltado
+- Leyenda pie3D. Arreglar resaltado - Hecho. Adrián lo ha arreglado. Eso sí, me ha dicho no usar mouseover como función personalizada porque implosiona el universo.
 - Centrar siempre el pie en el div. Tanto en visualización como en el dashboard. Quitar desplazamiento lateral con botoón secundario (dejar solo rotar). Quitar dat.gui
 - Arreglar conflictos en dashboard entre charts. Filtros que no se aplican, "pie" que se dibuja en la escena del barschart, etc.
 - Agregar tercera dimensión barsChart3D
-- Agregar alguna visualización más a la biblioteca vr_charts
+- Agregar alguna visualización más a la biblioteca vr_charts. Bolas creo que será lo mejor
+
+##18-11-2016
+
+Estoy teniendo muchos problemas a la hora de separar escenas en el dashboard. He estado con Adrián durante horas para separar dos escenas, sin Kibana, y lo hemos conseguido (ver https://github.com/adrianalonsoba/THREEDC/tree/master/demo24).
+
+Pero en Kibana no lo consigo hacer. He actualizado 3dc.js, ya no uso initializer, las variables son locales (creo) y no debería interferir nada. Aun así, lo hacen. Hoy quiero resolver esto. Para ello:
+
+Sin Kibana:
+1. Enterarme de qué son los closures en Javascript https://developer.mozilla.org/es/docs/Web/JavaScript/Closures 
+2. Cambiar nombres de funciones sin 1,2
+3. Convertir variables en locales de alguna forma (corchetes??)
+
+
